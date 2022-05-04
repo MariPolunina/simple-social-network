@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/simple-social-network/static/css/main.fa1f8292.css",
-    "main.js": "/simple-social-network/static/js/main.04d3c1d2.js",
+    "main.js": "/simple-social-network/static/js/main.8814e208.js",
     "static/js/231.afad5211.chunk.js": "/simple-social-network/static/js/231.afad5211.chunk.js",
     "static/js/787.d7317416.chunk.js": "/simple-social-network/static/js/787.d7317416.chunk.js",
     "static/media/loader.gif": "/simple-social-network/static/media/loader.370cccee416a9a388211.gif",
     "index.html": "/simple-social-network/index.html",
     "main.fa1f8292.css.map": "/simple-social-network/static/css/main.fa1f8292.css.map",
-    "main.04d3c1d2.js.map": "/simple-social-network/static/js/main.04d3c1d2.js.map",
+    "main.8814e208.js.map": "/simple-social-network/static/js/main.8814e208.js.map",
     "231.afad5211.chunk.js.map": "/simple-social-network/static/js/231.afad5211.chunk.js.map",
     "787.d7317416.chunk.js.map": "/simple-social-network/static/js/787.d7317416.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.fa1f8292.css",
-    "static/js/main.04d3c1d2.js"
+    "static/js/main.8814e208.js"
   ]
 }
