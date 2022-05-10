@@ -1,0 +1,29 @@
+.field {
+  width: 100%;
+    display: flex;
+    flex-direction: column;
+    & * {
+        font-size: 24px;
+        @media screen and (max-width:390px) {
+            font-size: 18px;
+        }
+    }
+    & span{
+        color: red;
+        font-weight: 700;
+    }
+  
+}
+
+.noneBorderInput{
+    border: none;
+   outline:none;
+}
+
+.textArea{
+    width: 95%;
+    align-self: center;
+    @media screen and (max-width:800px) {
+        width: 80%;
+    }
+}

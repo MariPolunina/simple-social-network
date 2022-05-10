@@ -1,0 +1,33 @@
+$fontSize:16px;
+
+.dynamicForm{
+    display: flex;
+    flex-direction: column;
+}
+.formContainer{
+    width: 100%;
+    font-size: $fontSize;
+}
+.rowForm{
+    display: flex;
+    flex-direction: row;
+    flex-grow: 1;
+    font-weight: 700;
+    margin-bottom: 5px;
+    align-items: center;
+}
+.inputText{
+    flex-grow: 1;
+    margin-left: 20px;
+    font-size: $fontSize;
+    padding: 5px;
+}
+.buttonSave{
+    align-self: center;
+    font-size: $fontSize;
+    padding:5px 15px;
+}
+.aboutMe{
+    width: 100%;
+    display: flex;
+}

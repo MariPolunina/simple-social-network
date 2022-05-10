@@ -1,0 +1,168 @@
+$fontSize: 16px;
+
+
+@mixin flexContainer($alignItems, $flexDirection, $justify) {
+    display: flex;
+    align-items: $alignItems;
+    flex-direction: $flexDirection;
+    justify-content: $justify;
+}
+
+.content {
+    @include flexContainer(center, row, space-around);
+    height: 100%;
+    width: 95%;
+    margin-top: 10px;
+    overflow: hidden;
+    @media screen and (max-width:1000px) {
+        flex-direction: column;
+        gap: 10px;
+        padding-top: 10px;
+    }
+}
+.avatar {
+    @include flexContainer(center, column, center);
+    position: relative;
+}
+
+.changeAvatarInput {
+    background-color: rgba($color: #9bcfe0, $alpha: 0.9);
+    display: none;
+    width: 100%;
+    box-sizing: border-box;
+    padding: 5px;
+    position: absolute;
+    bottom: 0;
+    //  font-size: $fontSize;
+}
+.avatarImg:hover ~ .changeAvatarInput,
+.changeAvatarInput:hover,
+.avatarDefault:hover ~ .changeAvatarInput {
+    display: inline-block;
+}
+.errorMessage {
+    font-weight: 800;
+    color: red;
+}
+.mainInfo {
+    @include flexContainer(flex-start, column, center);
+    flex-basis: 65%;
+    max-width: 65%;
+    
+    @media screen and (max-width:800px) {
+        flex-basis: 85%;
+        max-width: 85%;
+    }
+    @media screen and (max-width:500px) {
+        flex-basis: 95%;
+        max-width: 95%;
+    }
+}
+.formStatic {
+    @include flexContainer(flex-start, column, center);
+    flex-wrap: wrap;
+    width: 100%;
+}
+.fieldDescription {
+    font-weight: 700;
+    flex-basis: 25%;
+    min-width: 25%;
+}
+.avatarImg{
+    @media screen and (max-width:1100px) {
+        max-width: 80%;
+    }
+}
+.value {
+    flex-basis: 70%;
+    word-wrap: break-word;
+    width: 1000px;
+    @media screen and (max-width:1600px) {
+        width: 700px;
+    }
+    @media screen and (max-width:1200px) {
+        width: 600px;
+    }
+    @media screen and (max-width:1100px) {
+        width: 500px;
+    }
+    @media screen and (max-width:600px) {
+        width: 400px;
+    }
+    @media screen and (max-width:500px) {
+        width: 350px;
+    }
+    @media screen and (max-width:400px) {
+        width: 300px;
+    }
+    @media screen and (max-width:320px) {
+        width: 200px;
+    }
+}
+.fieldContacts {
+    @include flexContainer(flex-start, column, flex-start);
+    width: 100%;
+}
+.contactsInstaticForm {
+    @include flexContainer(flex-start, column, center);
+    padding-left: 15px;
+    margin: 10px 0;
+    width: 100%;
+    box-sizing: border-box;
+}
+.fieldFormStatic {
+    @include flexContainer(center, row, flex-start);
+    width: 95%;
+    margin-bottom: 5px;
+}
+.fieldLink {
+    color: black;
+    flex-basis: 70%;
+    text-decoration: none;
+    transition: background-color 0.7s ease;
+    box-sizing: content-box;
+    text-overflow: ellipsis;
+    white-space: nowrap; /* Запрещаем перенос строк */
+    overflow: hidden;
+
+}
+.fieldLink:hover {
+    text-decoration: underline;
+    background-color: #9bcfe0;
+}
+.changeButton {
+    font-size: $fontSize;
+    align-self: center;
+    padding: 5px 15px;
+
+}
+.iconColor {
+    margin-right: 5px;
+}
+.firstcolumn {
+    @include flexContainer(center, row, flex-start);
+    flex-basis: 3%;
+}
+.dynamicForm {
+    width: 100%;
+}
+.avatarDefault {
+    background-color: #00a7c7;
+    padding: 20px;
+    border-radius: 50%;
+    @media screen and (max-width:1100px) {
+        max-width: 80%;
+    }
+}
+.avatarInfo {
+    @include flexContainer(center, column, center);
+    gap: 5px;
+}
+.usersButton {
+    @include flexContainer(center, column, center);
+    gap: 5px;
+}
+.unfollowed {
+    background-color: #feab6b;
+    font-style: italic;
+}

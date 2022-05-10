@@ -1,0 +1,100 @@
+@mixin flexContainer($flexDirection, $justifyContent: flex-start, $alignItems: stretch) {
+    display: flex;
+    flex-direction: $flexDirection;
+    justify-content: $justifyContent;
+    align-items: $alignItems;
+}
+
+.newMessageContainer {
+    background-color: white;
+    width: 35%;
+    height: 35%;
+    @include flexContainer(column);
+    box-shadow: 0 0 8px #feab6b;
+     @media screen and (max-width:1300px) {
+        width:55%;
+        height: 37%;
+    }
+    @media screen and (max-width:500px) {
+        width:80%;
+    }
+    @media screen and (max-width:400px) {
+        height: 42%;
+    }
+    @media screen and (max-height:800px) {
+        height: 50%;
+    }
+    @media screen and (max-height:590px) {
+        height: 60%;
+    }
+    @media screen and (max-height:500px) {
+        height: 80%;
+    }
+}
+.messageBody {
+    padding: 5px 10px;
+    width: 100%;
+    height: 100%;
+    box-sizing: border-box
+}
+.headerNewMessage {
+    @include flexContainer(row, space-between, center);
+    background-color: #feab6b88;
+    padding: 5px;
+}
+
+.hederText {
+    color: rgba(0, 0, 0, 0.664);
+}
+.shortUserInfoContainer {
+    @include flexContainer(row, flex-start, center);
+    margin: 5px 0;
+    gap: 10px;
+}
+.linkProfile {
+    @include flexContainer(row, center, center);
+    flex-basis: 14%;
+}
+.avatarNewMessage {
+    max-width: 60%;
+    border-radius: 50%;
+}
+.defaultAvatar {
+    max-width: 50%;
+    padding: 5px;
+    border-radius: 50%;
+    background-color: #feab6b;
+}
+.textAreaContainer{
+    height: 100%;
+    flex-grow: 1;
+    padding: 15px;
+}
+.newMessageTextArea {
+    width: 100%;
+    padding: 5px;
+    font-size: 16px;
+    box-sizing: border-box;
+    height: 100%;
+}
+.formNewMessageContainer {
+    width: 100%;
+    @include flexContainer(column, flex-start);
+    flex-grow: 1;
+    height: 78%;
+}
+.sendButton {
+    font-size: 16px;
+    align-self: center;
+    padding: 5px 15px;
+}
+.bigBlockWindow {
+    position: fixed;
+    @include flexContainer(row, center, center);
+    background-color: rgba(0, 0, 0, 0.459);
+    height: 100%;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}

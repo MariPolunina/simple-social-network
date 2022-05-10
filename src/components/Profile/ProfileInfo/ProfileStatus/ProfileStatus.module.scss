@@ -1,0 +1,21 @@
+.statusStatic{
+    width: 100%;
+    cursor: pointer;
+}
+.statusStatic:hover{
+    background-color: #9bcfe0;
+}
+.statusContainer{
+    display: flex;
+    width: 100%;
+    font-size: 18px;
+    margin-bottom: 10px;
+    border-bottom: 2px solid #e76f3d;
+    @media screen and (max-width:1000px) {
+        font-size: 20px;
+    }
+}
+.statusDynamic{
+    font-size: 18px;
+    width: 100%;
+}

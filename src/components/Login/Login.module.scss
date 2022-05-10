@@ -1,0 +1,100 @@
+$backColor: #f3e9e7;
+
+$fontSize: 24px;
+$minFontSize:18px;
+
+@mixin flexContainer($flexDirection: column, $alignItems: flex-start) {
+    display: flex;
+    flex-direction: $flexDirection;
+    align-items: $alignItems;
+}
+.loginContainer {
+    background-color: $backColor;
+    @include flexContainer(column, stretch);
+    width: 100%;
+    height: 100%;
+}
+
+.formButton {
+    align-self: flex-start;
+    font-size: $fontSize;
+    @media screen and (max-width:390px) {
+        font-size: $minFontSize;
+    }
+}
+.formContainer {
+    @include flexContainer(column, stretch);
+    width: 70%;
+    gap: 10px;
+    @media screen and (max-width:625px) {
+        width:95%
+    }
+}
+.fieldContainer {
+    @include flexContainer(row, center);
+    width: 100%;
+    @media screen and (max-width:390px) {
+        font-size: $minFontSize;
+    }
+}
+.fieldContainer:not(:first-of-type){
+    border:1px solid rgb(133, 133, 133);
+    box-sizing: content-box;
+}
+.fieldPassword{
+    background-color: white;
+}
+.buttonPassword{
+    background-color: transparent;
+    border: none;
+    & img{
+        @media screen and (max-width:390px) {
+            max-width: 70%;
+        }
+    }
+}
+.buttonPassword:hover{
+    background-color: transparent;
+}
+.fieldLogin{
+    width: 100%;
+    @media screen and (max-width:390px) {
+        font-size: $minFontSize;
+    }
+}
+.container,
+.formCenter,
+.loginForm {
+    @include flexContainer(column, center);
+    width: 100%;
+}
+.formLabel {
+    font-size: $fontSize;
+    @media screen and (max-width:390px) {
+        font-size: $minFontSize;
+    }
+}
+.checkBoxStyle {
+    transform: scale(1.4);
+}
+.errorMessage {
+    color: red;
+    font-size: $fontSize;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+.inputCaptcha{
+    font-size: $fontSize;
+    margin-left: 10px;
+}
+.additionalInfo{
+    font-size: $fontSize;
+    @media screen and (max-width:390px) {
+        font-size: $minFontSize;
+    }
+}
+.h1Login{
+    @media screen and (max-width:390px) {
+        font-size: 1.5*$minFontSize;
+    }
+}

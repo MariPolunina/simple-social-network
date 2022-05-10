@@ -1,0 +1,11 @@
+$backColor:#f3e9e7;
+
+.content{
+    background-color: $backColor;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}

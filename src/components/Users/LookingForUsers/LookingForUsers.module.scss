@@ -1,0 +1,37 @@
+.formSearch {
+    align-self: center;
+    background-color: white;
+    padding: 5px;
+    border-radius: 15px;
+    width: 35%;
+    box-shadow: 0 0 5px #00a7c7 ;
+    margin: 20px 0;
+
+    @media screen and (max-width: 1000px) {
+        width: 50%;
+    }
+    @media screen and (max-width: 800px) {
+        width: 70%;
+    }
+}
+.flexForm {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+.fieldSearch {
+    font-size: 16 px;
+    padding: 5px;
+    border: none;
+    flex-grow: 1;
+    outline: none;
+}
+.searchButton {
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+.searchButton:hover {
+    background-color: transparent;
+}

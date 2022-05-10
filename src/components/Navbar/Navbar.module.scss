@@ -1,0 +1,51 @@
+$backColor: #e76f3d;
+$hoverColor: #feab6b;
+
+.menuContainer {
+    grid-area: n;
+    z-index: 1000;
+    background-color: $backColor;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    height: 100%;
+    /* @media screen and (max-width:850px){
+       position: fixed;
+       top:10px;
+       left:0;
+       margin-left: 10px;
+    }*/
+}
+.bigMenu {
+    align-items: center;
+}
+.bigMenu .link {
+    text-align: center;
+}
+.navContainer {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    @media screen and (max-width: 850px) {
+        display: none;
+    }
+}
+.bigNavContainer {
+    display: flex;
+    padding: 10px;
+    z-index: 100000;
+}
+.link {
+    padding-left: 10px;
+    font-size: 1.5em;
+    color: white;
+    text-decoration: none;
+    width: 100%;
+    box-sizing: border-box;
+}
+.link:hover {
+    background-color: $hoverColor;
+}
+.navContainer .link:hover {
+    width: 102%;
+}

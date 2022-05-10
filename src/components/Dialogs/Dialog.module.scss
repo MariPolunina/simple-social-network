@@ -1,0 +1,132 @@
+@mixin flexContainer($flexDirection, $alignItems: stretch, $justifyContent: flex-start) {
+    display: flex;
+    flex-direction: $flexDirection;
+    justify-content: $justifyContent;
+}
+.colorDiv {
+    background-color: #f3e9e7;
+    @include flexContainer(row);
+    height: 100%;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+}
+.upperRow {
+    @include flexContainer(row, center, flex-start);
+    align-items: center;
+    gap: 20px;
+}
+
+.dialogColumn {
+    background-color: #00a7c7;
+    @include flexContainer(column);
+    text-align: center;
+    overflow: scroll;
+    width: 100%;
+}
+.messageColumnContainer {
+    height: 100%;
+}
+.messageColumn {
+    background-color: #f3e9e7;
+    width: 100%;
+    padding: 0 10px;
+    box-sizing: border-box;
+    flex-basis: 80%;
+    height: 100%;
+    @include flexContainer(column);
+    position: relative;
+    overflow: hidden;
+}
+.listName,
+.listMessages {
+    list-style: none;
+    @include flexContainer(column, flex-start, flex-start);
+    padding: 0;
+}
+.listMessages {
+    flex-grow: 1;
+}
+.messagesForm {
+    height: 1400px;
+    overflow: scroll;
+    @media screen and (max-height: 2000px) {
+       height: 1500px;
+    }
+    @media screen and (max-height: 1900px) {
+       height: 1400px;
+    }
+    @media screen and (max-height: 1780px) {
+       height: 1300px;
+    }
+    @media screen and (max-height: 1670px) {
+       height: 1200px;
+    }
+    @media screen and (max-height: 1550px) {
+       height: 1100px;
+    }
+    @media screen and (max-height: 1450px) {
+       height: 1000px;
+    }
+    @media screen and (max-height: 1350px) {
+       height: 900px;
+    }
+    @media screen and (max-height: 1240px) {
+       height: 800px;
+    }
+    @media screen and (max-height: 1130px) {
+       height: 700px;
+    }
+    @media screen and (max-height: 1010px) {
+       height: 600px;
+    }
+    @media screen and (max-height: 900px) {
+       height: 500px;
+    }
+    @media screen and (max-height: 790px) {
+       height: 400px;
+    }
+    @media screen and (max-height: 680px) {
+       height: 300px;
+    }
+    @media screen and (max-height: 680px) {
+       height: 250px;
+    }
+    @media screen and (max-height: 520px) {
+       height: 200px;
+    }
+    @media screen and (max-height: 460px) {
+       height: 150px;
+    }
+}
+.formArea {
+    @include flexContainer(row);
+    gap: 5px;
+    align-self: center;
+    width: 95%;
+    margin-bottom: 10px;
+}
+.textareaMessage {
+    width: 98%;
+    font-size: 20px;
+    padding: 0;
+}
+.profileName {
+    color: black;
+    text-decoration: none;
+}
+.waitMessages {
+    background-color: #f3e9e7;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+.hidden {
+    visibility: hidden;
+}
+.messagesForm::-webkit-scrollbar {
+    width: 0;
+}
+.dialogColumn::-webkit-scrollbar {
+    width: 0;
+}
