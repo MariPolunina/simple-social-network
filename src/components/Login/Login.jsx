@@ -34,7 +34,7 @@ const LoginForm = (props) => {
     );
 }
 
-export default function Login(props) {
+function Login(props) {
     const [showPassword, setShowPassword] = useState(false);
     const changeShowPassword = () => {
         setShowPassword(!showPassword);
@@ -66,6 +66,8 @@ export default function Login(props) {
         </div>
     );
 }
+
+export default Login;
 
 function CaptchaField(props) {
     return (

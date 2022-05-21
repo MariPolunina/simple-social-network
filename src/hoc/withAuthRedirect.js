@@ -4,7 +4,8 @@ import { connect } from "react-redux";
 let mapStateToPropsForRedirect = (state) => ({
     isAuth: state.auth.isAuth
 });
-export default function withAuthRedirect(Component) {
+
+function withAuthRedirect(Component) {
     function RedirectComponent(props) {
         if (!props.isAuth) {
             return <Navigate to="/login" />
@@ -12,5 +13,8 @@ export default function withAuthRedirect(Component) {
         return <Component {...props} />
     }
     let ConnectedRedirectComponent = connect(mapStateToPropsForRedirect)(RedirectComponent);
+    ConnectedRedirectComponent.displayName=`withAuthRedirect(${Component.displayName || Component.name || 'Component' })`;
     return ConnectedRedirectComponent;
 }
+
+export default withAuthRedirect;

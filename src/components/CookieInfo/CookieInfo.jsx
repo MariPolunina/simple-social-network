@@ -3,7 +3,7 @@ import Style from './CookieInfo.module.scss';
 import cookieImg from '../../assets/images/cookie.png';
 import ButtonClose from "../common/ButtonClose/ButtonClose";
 
-export default function CookieInfo(props) {
+function CookieInfo(props) {
     const [showCookie, setShowCookie] = useState(true);
     return (
         <div className={Style.cookieContainer}>
@@ -15,3 +15,5 @@ export default function CookieInfo(props) {
         </div>
     );
 }
+
+export default CookieInfo;

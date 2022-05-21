@@ -4,8 +4,8 @@ import WriteNewMessage
 import { SucessMessage } from "../../components/Users/Users";
 import Style from './withWriteNewMessage.module.scss'
 
-export default function withWriteNewMessage(Component) {
-    return function (props) {
+function withWriteNewMessage(Component) {
+     function WithWriteMessage (props) {
         const [showNewMessage, setShowNewMessage] = useState(false);
         const [nameNewMessage, setNewMeessage] = useState('');
         const [imgUrlNewMessage, setImgUrlNewMessage] = useState('');
@@ -30,4 +30,8 @@ export default function withWriteNewMessage(Component) {
             </div>
         );
     }
+    WithWriteMessage.displayName=`withAuthRedirect(${Component.displayName || Component.name || 'Component' })`;
+    return WithWriteMessage;
 }
+
+export default withWriteNewMessage;
