@@ -11,6 +11,7 @@ let mapStateToProps = (state) => {
         isFetching:state.auth.isAuth,
     })
 };
+//d
 export default connect(mapStateToProps, {
     LoginTC, LogoutTC
 })(Login);
