@@ -4,7 +4,7 @@ import WriteNewMessage
 import { SucessMessage } from "../../components/Users/Users";
 import Style from './withWriteNewMessage.module.scss'
 
-function withWriteNewMessage(Component) {
+export default function withWriteNewMessage(Component) {
      function WithWriteMessage (props) {
         const [showNewMessage, setShowNewMessage] = useState(false);
         const [nameNewMessage, setNewMeessage] = useState('');
@@ -34,4 +34,3 @@ function withWriteNewMessage(Component) {
     return WithWriteMessage;
 }
 
-export default withWriteNewMessage;

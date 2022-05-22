@@ -3,7 +3,7 @@ import Style from './Login.module.scss';
 import { Form, Field } from 'react-final-form'
 import { Navigate } from "react-router-dom";
 import { required } from "../../utils/validators/validators";
-import { Input, InputWithoutBorder} from "../common/FormsControls/FormsControls";
+import { Input, InputWithoutBorder } from "../common/FormsControls/FormsControls";
 import openEyes from '../../assets/images/free-icon-font-eye-3917104.png';
 import closeEyes from '../../assets/images/free-icon-font-eye-crossed-3917175.png';
 import classNames from "classnames";
@@ -34,7 +34,7 @@ const LoginForm = (props) => {
     );
 }
 
-function Login(props) {
+export default function Login(props) {
     const [showPassword, setShowPassword] = useState(false);
     const changeShowPassword = () => {
         setShowPassword(!showPassword);
@@ -66,8 +66,6 @@ function Login(props) {
         </div>
     );
 }
-
-export default Login;
 
 function CaptchaField(props) {
     return (

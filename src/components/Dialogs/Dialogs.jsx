@@ -33,7 +33,7 @@ function TextareaMessage({ input, ...props }) {
     return (<textarea {...input} rows={3} className={Style.textareaMessage}></textarea>)
 }
 
-function Dialogs(props) {
+export default function Dialogs(props) {
     const [dialogData, setDialogData]=useState([]);
     useEffect(() => {
         let minItem = (props.currentPage - 1) * props.pageSize;
@@ -57,7 +57,6 @@ function Dialogs(props) {
     );
 }
 
-export default Dialogs;
 
 export function MessagesItem(props) {
     const dispatch = useDispatch();
